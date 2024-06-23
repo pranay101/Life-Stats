@@ -35,7 +35,7 @@ export default function Calculator() {
   const [instructions, setInstuctions] = useState<boolean>(true);
 
   const [country, setCountry] = useState<Country | null>(null);
-  const [dob, setDob] = useState<Date>(new Date("2001-07-26T00:00:00.000Z"));
+  const [dob, setDob] = useState<Date>(new Date());
   const [gender, setGender] = useState<string>("male");
   const [timeFrame, setTimeFrame] = useState<string>("weeks");
 
