@@ -58,7 +58,7 @@ export default function Calculator() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 py-10">
       <section className="w-full max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-10 h-full">
         {!instructions && (
-          <div className="flex items-center justify-evenly  mb-10 flex-wrap">
+          <div className="flex items-center justify-evenly  mb-10 flex-wrap space-y-3 md:space-y-0">
             <CountryPicker
               selectedCountry={country}
               setSelectedCountry={setCountry}

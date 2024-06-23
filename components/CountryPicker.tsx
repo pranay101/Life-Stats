@@ -42,7 +42,7 @@ const CountryPicker: React.FC<CountryPickerProps> = ({selectedCountry,setSelecte
   },[])
 
   return (
-    <div className="relative inline-block text-left w-64">
+    <div className="relative inline-block text-left w-64 z-50">
       <div>
         <button
           type="button"
