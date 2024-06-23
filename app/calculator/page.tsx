@@ -108,7 +108,7 @@ export default function Calculator() {
           </div>
         )}
 
-        <LifeYears age={age + 20} years={years} type={timeFrame as TimeFrame} />
+        <LifeYears age={age} years={years} type={timeFrame as TimeFrame} />
 
         {!instructions && (
           <div className="text-sm mt-10">
