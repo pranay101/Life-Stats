@@ -111,7 +111,7 @@ export default function Calculator() {
         <LifeYears age={age + 20} years={years} type={timeFrame as TimeFrame} />
 
         {!instructions && (
-          <footer className="text-sm mt-10">
+          <div className="text-sm mt-10">
             <span className="flex items-center gap-4">
               <div className={`w-4 h-4 rounded-full bg-pink-500`} />
               Life Left
@@ -120,8 +120,23 @@ export default function Calculator() {
               <div className={`w-4 h-4 rounded-full bg-gray-300`} />
               Life Spent
             </span>
-          </footer>
+            <span className="flex items-center gap-4">
+              <div className={`w-4 h-4 rounded-full bg-gray-300`} />
+              Life Spent
+            </span>
+          </div>
         )}
+
+        <footer>
+          <a
+            className="flex items-center text-gray-700 hover:text-pink-900 text-sm"
+            href="https://github.com/pranay101/Life-Stats"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+        </footer>
       </section>
     </main>
   );
