@@ -35,13 +35,13 @@ export default function Calculator() {
   const [instructions, setInstuctions] = useState<boolean>(true);
 
   const [country, setCountry] = useState<Country | null>(null);
-  const [dob, setDob] = useState<Date>(new Date());
+  const [dob, setDob] = useState<string>("");
   const [gender, setGender] = useState<string>("male");
   const [timeFrame, setTimeFrame] = useState<string>("weeks");
 
   const [years, setYears] = useState<number>(0);
 
-  const age = useMemo(() => calculateAge(dob), [dob]);
+  const age = useMemo(() => calculateAge(new Date(dob)), [dob]);
 
   useEffect(() => {
     if (country) {
@@ -120,14 +120,10 @@ export default function Calculator() {
               <div className={`w-4 h-4 rounded-full bg-gray-300`} />
               Life Spent
             </span>
-            <span className="flex items-center gap-4">
-              <div className={`w-4 h-4 rounded-full bg-gray-300`} />
-              Life Spent
-            </span>
           </div>
         )}
 
-        <footer>
+        <footer className="mt-5 p-4 border-t ">
           <a
             className="flex items-center text-gray-700 hover:text-pink-900 text-sm"
             href="https://github.com/pranay101/Life-Stats"
