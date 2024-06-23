@@ -110,20 +110,18 @@ export default function Calculator() {
 
         <LifeYears age={age + 20} years={years} type={timeFrame as TimeFrame} />
 
-        <footer className="text-sm">
-          {!instructions && (
-            <>
-              <span className="flex items-center gap-4">
-                <div className={`w-4 h-4 rounded-full bg-pink-500`} />
-                Life Left
-              </span>
-              <span className="flex items-center gap-4">
-                <div className={`w-4 h-4 rounded-full bg-gray-300`} />
-                Life Spent
-              </span>
-            </>
-          )}
-        </footer>
+        {!instructions && (
+          <footer className="text-sm mt-10">
+            <span className="flex items-center gap-4">
+              <div className={`w-4 h-4 rounded-full bg-pink-500`} />
+              Life Left
+            </span>
+            <span className="flex items-center gap-4">
+              <div className={`w-4 h-4 rounded-full bg-gray-300`} />
+              Life Spent
+            </span>
+          </footer>
+        )}
       </section>
     </main>
   );
